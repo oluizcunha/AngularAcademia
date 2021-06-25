@@ -1,0 +1,1 @@
+https://pt.it-brain.online/tutorial/typescript/index/
