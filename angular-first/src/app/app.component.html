@@ -101,4 +101,11 @@
   <app-message [mensagem]="'alo'" [alert]="texto"></app-message>
   </div>
 
+  <div>
+    <app-message [mensagem] = "'Demonstração do Input Property Component'"
+    [alert] = "texto" (exibirDados) = "exibirDados($event)">
+    </app-message>
+  </div>
+
+
 </div>

@@ -27,4 +27,13 @@ export class AppComponent {
 
   public texto: string = 'este é o texto da caixa de dialogo alert';
 
+    //implementado função de exibição de dados de saida(Output)
+    public exibirDados(data:any){
+      let strMessage: string = "Obrigado por se cadastrar " + data.nome +".";
+
+      strMessage +='o email ' + data.email +'foi cadastrado com sucesso!';
+
+      alert(strMessage)
+    }
+
 }

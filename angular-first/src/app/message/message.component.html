@@ -6,10 +6,13 @@
 
 
 <div>
-  <h1>Output</h1>
-  Informe seu nome completo: <input type="text" [(ngModel)]="data.nome">
-  <br />
-  Informe seu email: <input type="email" [(ngModel)]="data.email">
-  <br />
-  <input type="button" value="Enviar" (click)="enviarDados()" />
+  <h2>
+    @Input e @Output Decorators
+  </h2>
+  <br>
+  Informe seu nome completo: <input type="text" [(ngModel)] = "data.nome">
+  <br>
+  Informe seu email: <input type="email" [(ngModel)] = "data.email">
+  <br>
+  <input type="button" value="Enviar" (click)= "enviarDados()">
 </div>
