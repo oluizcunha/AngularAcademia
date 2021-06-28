@@ -1,5 +1,15 @@
 <div>
-  <h1>Aqui estamos em message</h1>
+  <h1>Input</h1>
   Mensagem: <h3>{{mensagem}}</h3>
   <input type="button" value="Exibir Alert" (click)="exibirAlert()" />
+</div>
+
+
+<div>
+  <h1>Output</h1>
+  Informe seu nome completo: <input type="text" [(ngModel)]="data.nome">
+  <br />
+  Informe seu email: <input type="email" [(ngModel)]="data.email">
+  <br />
+  <input type="button" value="Enviar" (click)="enviarDados()" />
 </div>
