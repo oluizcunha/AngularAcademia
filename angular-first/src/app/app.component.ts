@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-first';
+
+  public x: number=10;
+  public umArray: Array<number> = [10,22,14];
+  public dataHoje: Date = new Date();
+  public statusBooleano: boolean = true;
+
+  public exibirTexto(): string{
+    return 'Retornando string'
+  }
+
 }
