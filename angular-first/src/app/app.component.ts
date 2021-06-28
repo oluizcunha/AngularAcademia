@@ -25,4 +25,6 @@ export class AppComponent {
     alert('Evento de click')
   }
 
+  public texto: string = 'este é o texto da caixa de dialogo alert';
+
 }
