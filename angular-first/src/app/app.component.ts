@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -12,6 +13,8 @@ export class AppComponent {
   public umArray: Array<number> = [10,22,14];
   public dataHoje: Date = new Date();
   public statusBooleano: boolean = true;
+
+  public nome: string = '';
 
   public exibirTexto(): string{
     return 'Retornando string'
