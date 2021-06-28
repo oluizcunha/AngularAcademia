@@ -17,4 +17,9 @@ export class AppComponent {
     return 'Retornando string'
   }
 
+  public showAlert():void{
+    console.log("tu apertou o botao..")
+    alert('Evento de click')
+  }
+
 }

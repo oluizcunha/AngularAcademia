@@ -81,7 +81,12 @@
   <span>Uma funcao {{exibirTexto()}}</span>
 
   <h1>Property binding</h1>
+  <!-- deve-se ser vinculado ao input -->
   <span>Valor de x: <input [value] = "x"/></span>
+  <br/>
+
+  <h1>Evente binding</h1>
+  <button (click)="showAlert()" >Botao</button>
 
 
 </div>
