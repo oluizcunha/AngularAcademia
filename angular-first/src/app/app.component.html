@@ -184,4 +184,18 @@
       </tbody>
     </table>
   </div>
+
+  <div>
+    <h1>Usando NgSwitch</h1>
+    <p>Altere o valor inserindo um numero:</p>
+    <input type="text" [(ngModel)]="algarismo" />
+    <div [ngSwitch]="algarismo">
+      <div *ngSwitchCase="'1'">ngSwitch - elemento Um</div>
+      <div *ngSwitchCase="'2'">ngSwitch - elemento Dois</div>
+      <div *ngSwitchCase="'3'">ngSwitch - elemento Três</div>
+      <div *ngSwitchCase="'4'">ngSwitch - elemento Quatro</div>
+      <div *ngSwitchCase="'5'">ngSwitch - elementoCinco</div>
+      <div *ngSwitchDefault>ngSwitch - elemento default</div>
+    </div>
+  </div>
 </div>

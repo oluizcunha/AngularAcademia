@@ -74,6 +74,8 @@ export class AppComponent {
   CompositeKey(index: any, item: any) {
     return item.titulo + item.direcao;
   }
+
+  algarismo: number = 0;
 }
 
 class Filme {
