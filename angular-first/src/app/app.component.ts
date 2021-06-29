@@ -1,11 +1,33 @@
-import { Component } from '@angular/core';
+import {
+  Component,
+  AfterContentChecked,
+  AfterContentInit,
+  AfterViewChecked,
+  AfterViewInit,
+  DoCheck,
+  OnChanges,
+  OnDestroy,
+  OnInit,
+  Input,
+  SimpleChanges,
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
+export class AppComponent
+  implements
+    OnChanges,
+    OnInit,
+    DoCheck,
+    AfterContentInit,
+    AfterContentChecked,
+    AfterViewInit,
+    AfterViewChecked,
+    OnDestroy
+{
   title = 'angular-first';
 
   public x: number = 10;
@@ -83,6 +105,39 @@ export class AppComponent {
   tamanho: number = 12;
   color: string = '#380F6C';
   estiloClasse: EstiloClasse = new EstiloClasse();
+
+  exibirFilho: boolean = false;
+
+  constructor() {
+    console.log('AppComponent:Constructor');
+  }
+  toggle() {
+    this.exibirFilho = !this.exibirFilho;
+  }
+  ngOnChanges() {
+    console.log('AppComponent:OnChanges');
+  }
+  ngOnInit() {
+    console.log('AppComponent:OnInit');
+  }
+  ngDoCheck() {
+    console.log('AppComponent:DoCheck');
+  }
+  ngAfterContentInit() {
+    console.log('AppComponent:AfterContentInit');
+  }
+  ngAfterContentChecked() {
+    console.log('AppComponent:AfterContentChecked');
+  }
+  ngAfterViewInit() {
+    console.log('AppComponent:AfterViewInit');
+  }
+  ngAfterViewChecked() {
+    console.log('AppComponent:AfterViewChecked');
+  }
+  ngOnDestroy() {
+    console.log('AppComponent:OnDestroy');
+  }
 }
 
 class Filme {

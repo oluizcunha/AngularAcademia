@@ -6,12 +6,16 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MessageComponent } from './message/message.component';
 import { AlterarTextoDirective } from './alterar-texto.directive';
+import { NomedocomponentComponent } from './nomedocomponent/nomedocomponent.component';
+import { ComponenteFilhoComponent } from './componente-filho/componente-filho.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MessageComponent,
-    AlterarTextoDirective
+    AlterarTextoDirective,
+    NomedocomponentComponent,
+    ComponenteFilhoComponent
   ],
   imports: [
     BrowserModule,
