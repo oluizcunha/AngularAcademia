@@ -70,6 +70,7 @@ export class AppComponent {
     },
   ];
 
+  //Auxiliador do array, para facilitar a interação
   CompositeKey(index: any, item: any) {
     return item.titulo + item.direcao;
   }

@@ -162,4 +162,26 @@
       <li *ngFor="let i of filmes">{{ i.titulo }} - {{ i.direcao }}</li>
     </ul>
   </div>
+
+  <div>
+    <h1>For com table</h1>
+    <table id="customers">
+      <thead>
+        <tr>
+          <td>Titulo</td>
+          <td>Diretor</td>
+          <td>Elenco</td>
+          <td>Ano de lançamento</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let i of filmes">
+          <td>{{ i.titulo }}</td>
+          <td>{{ i.direcao }}</td>
+          <td>{{ i.elenco }}</td>
+          <td>{{ i.anoLancamento }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
