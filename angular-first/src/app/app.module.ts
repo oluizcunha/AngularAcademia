@@ -5,11 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { MessageComponent } from './message/message.component';
+import { AlterarTextoDirective } from './alterar-texto.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MessageComponent
+    MessageComponent,
+    AlterarTextoDirective
   ],
   imports: [
     BrowserModule,
