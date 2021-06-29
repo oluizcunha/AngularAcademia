@@ -232,4 +232,19 @@
     Texto com fonte e cor indicados no arquivo CSS: configurado no template a
     partir do arquivo app.component.ts como object
   </div>
+
+  <div>
+    <!-- ngStyle -->
+    <h1>Diretiva ngStyle</h1>
+    <br /><br />
+    <input [(ngModel)]="color" />
+    <div [ngStyle]="{ color: color }">Mudar a cor do texto</div>
+    <input [(ngModel)]="tamanho" />
+    <div [ngStyle]="{ 'font-size.px': tamanho }">Mudar o tamanho da fonte</div>
+    66
+    <div [ngStyle]="estiloClasse">
+      Mudar a cor e o tamanho do texto alterando as propriedades no arquivo
+      app.component.ts
+    </div>
+  </div>
 </div>

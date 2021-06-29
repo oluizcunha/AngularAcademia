@@ -79,6 +79,10 @@ export class AppComponent {
 
   cssAlteradoViaVar: string = 'color size';
   umaClasseCss: UmaClasseCss = new UmaClasseCss();
+
+  tamanho: number = 12;
+  color: string = '#380F6C';
+  estiloClasse: EstiloClasse = new EstiloClasse();
 }
 
 class Filme {
@@ -92,4 +96,10 @@ class Filme {
 class UmaClasseCss {
   color: boolean = true;
   size: boolean = true;
+}
+
+class EstiloClasse {
+  color: string = '#FF5733';
+  'font-size.%': number = 150;
+  'font-weight': string = 'bold';
 }
