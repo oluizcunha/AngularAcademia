@@ -190,12 +190,46 @@
     <p>Altere o valor inserindo um numero:</p>
     <input type="text" [(ngModel)]="algarismo" />
     <div [ngSwitch]="algarismo">
-      <div *ngSwitchCase="'1'">ngSwitch - elemento Um</div>
-      <div *ngSwitchCase="'2'">ngSwitch - elemento Dois</div>
-      <div *ngSwitchCase="'3'">ngSwitch - elemento Três</div>
-      <div *ngSwitchCase="'4'">ngSwitch - elemento Quatro</div>
-      <div *ngSwitchCase="'5'">ngSwitch - elementoCinco</div>
-      <div *ngSwitchDefault>ngSwitch - elemento default</div>
+      <button *ngSwitchCase="'1'">ngSwitch - elemento Um</button>
+      <button *ngSwitchCase="'2'">ngSwitch - elemento Dois</button>
+      <button *ngSwitchCase="'3'">ngSwitch - elemento Três</button>
+      <button *ngSwitchCase="'4'">ngSwitch - elemento Quatro</button>
+      <button *ngSwitchCase="'5'">ngSwitch - elemento Cinco</button>
+      <button *ngSwitchDefault>ngSwitch - elemento default</button>
     </div>
+  </div>
+
+  <div>
+    <h1>Usando NGClass no CSS</h1>
+    <p>Diretiva ngClass</p>
+    <!-- primeira indicação de implementação-->
+    <div [ngClass]="'color size'">
+      Texto com fonte e cor indicados no arquivo CSS: configurado no template
+      como uma propriedade string
+    </div>
+  </div>
+
+  <!-- Outro exemplo-->
+  <div ngClass="color size">
+    Texto com fonte e cor indicados no arquivo CSS: configurado no template como
+    uma string
+  </div>
+  <div [ngClass]="['color', 'size']">
+    Texto com fonte e cor indicados no arquivo CSS: configurado no template como
+    um array
+  </div>
+  <div [ngClass]="{ color: true, size: true }">
+    Texto com fonte e cor indicados no arquivo CSS: configurado no template como
+    um object
+  </div>
+  <!-- Obtendo os dados a partir do arquivo .ts. -->
+  <!-- É possivel alterar o valor a partir do arquivo .ts. -->
+  <div [ngClass]="cssAlteradoViaVar">
+    Texto com fonte e cor indicados no arquivo CSS: configurado no template a
+    partir do arquivo app.component.ts
+  </div>
+  <div [ngClass]="umaClasseCss">
+    Texto com fonte e cor indicados no arquivo CSS: configurado no template a
+    partir do arquivo app.component.ts como object
   </div>
 </div>

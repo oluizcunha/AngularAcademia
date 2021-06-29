@@ -322,3 +322,11 @@ svg#clouds {
   background-color: #1976d2;
   color: white;
 }
+
+/*estilo para ngClass*/
+.color {
+  color: blue;
+}
+.size {
+  font-size: 35px;
+}

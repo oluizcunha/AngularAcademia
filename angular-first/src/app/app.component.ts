@@ -76,6 +76,9 @@ export class AppComponent {
   }
 
   algarismo: number = 0;
+
+  cssAlteradoViaVar: string = 'color size';
+  umaClasseCss: UmaClasseCss = new UmaClasseCss();
 }
 
 class Filme {
@@ -83,4 +86,10 @@ class Filme {
   direcao!: string;
   elenco!: string;
   anoLancamento!: string;
+}
+
+// criando uma nova classe fora da classe principal
+class UmaClasseCss {
+  color: boolean = true;
+  size: boolean = true;
 }
