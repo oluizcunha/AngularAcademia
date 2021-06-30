@@ -169,16 +169,25 @@ export class AppComponent
           Validators.pattern('[^ @]*@[^ @]*'),
         ])
       ),
-      senha: new FormControl(''),
+      senha: new FormControl('', this.validacaoSenha),
     });
     console.log('AppComponent:OnInit');
   }
+
   enviarDados(data: any) {
     // alert(
     //   'O e-mail inserido foi: ' + data.email + ' \nE a senha: ' + data.senha
     // );
     this.email = data.email;
     this.senha = data.senha;
+  }
+
+  validacaoSenha(formcontrol: any) {
+    console.log(formcontrol.value.length);
+    if (formcontrol.value.length < 5) {
+      return { senha: true };
+    }
+    return null;
   }
 }
 
