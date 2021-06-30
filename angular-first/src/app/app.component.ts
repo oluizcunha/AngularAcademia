@@ -13,6 +13,9 @@ import {
 } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
+import { ProductService } from './product.service';
+import { Produto } from './product';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -109,9 +112,9 @@ export class AppComponent
 
   exibirFilho: boolean = false;
 
-  constructor() {
-    console.log('AppComponent:Constructor');
-  }
+  // constructor() {
+  //
+  // }
   toggle() {
     this.exibirFilho = !this.exibirFilho;
   }
@@ -188,6 +191,17 @@ export class AppComponent
       return { senha: true };
     }
     return null;
+  }
+
+  produtos!: Produto[];
+  productService;
+
+  constructor() {
+    this.productService = new ProductService();
+    console.log('AppComponent:Constructor');
+  }
+  obterProdutos() {
+    this.produtos = this.productService.getProdutos();
   }
 }
 
