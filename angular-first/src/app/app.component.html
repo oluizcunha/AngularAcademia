@@ -94,6 +94,22 @@
     <a routerLink="/home">Home</a> <a routerLink="/faleconosco">Fale Conosco</a>
   </nav>
 </div>
+
+<div>
+  <h1>Form do angular</h1>
+  <form #userlogin="ngForm" (ngSubmit)="enviarDados(userlogin.value)">
+    <input type="text" name="email" placeholder="Insira seu email" ngModel />
+    <br />
+    <input
+      type="password"
+      name="senha"
+      placeholder="Insira sua senha"
+      ngModel
+    />
+    <br />
+    <input type="submit" value="Enviar" />
+  </form>
+</div>
 <router-outlet></router-outlet>
 <!--
 <div>

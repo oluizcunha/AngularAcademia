@@ -158,6 +158,12 @@ export class AppComponent
     'Nov',
     'Dez',
   ];
+
+  enviarDados(data: any) {
+    alert(
+      'O e-mail inserido foi: ' + data.email + ' \nE a senha: ' + data.senha
+    );
+  }
 }
 
 class Filme {
