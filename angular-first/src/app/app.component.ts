@@ -11,6 +11,7 @@ import {
   Input,
   SimpleChanges,
 } from '@angular/core';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -117,9 +118,6 @@ export class AppComponent
   ngOnChanges() {
     console.log('AppComponent:OnChanges');
   }
-  ngOnInit() {
-    console.log('AppComponent:OnInit');
-  }
   ngDoCheck() {
     console.log('AppComponent:DoCheck');
   }
@@ -159,10 +157,20 @@ export class AppComponent
     'Dez',
   ];
 
+  email: any;
+  formdata: any;
+  ngOnInit() {
+    this.formdata = new FormGroup({
+      email: new FormControl('agular@mail.com'),
+      senha: new FormControl('#$@%'),
+    });
+    console.log('AppComponent:OnInit');
+  }
   enviarDados(data: any) {
     alert(
       'O e-mail inserido foi: ' + data.email + ' \nE a senha: ' + data.senha
     );
+    this.email = data.email;
   }
 }
 

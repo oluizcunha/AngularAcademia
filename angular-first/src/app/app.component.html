@@ -110,6 +110,29 @@
     <input type="submit" value="Enviar" />
   </form>
 </div>
+
+<div>
+  <div>
+    <form [formGroup]="formdata" (ngSubmit)="enviarDados(formdata.value)">
+      <input
+        type="text"
+        name="email"
+        placeholder="Insira seu email"
+        formControlName="email"
+      />
+      <br />
+      <input
+        type="password"
+        name="senha"
+        placeholder="Insira sua senha"
+        formControlName="senha"
+      />
+      <br />
+      <input type="submit" value="Enviar" />
+    </form>
+  </div>
+  <p>O email informado foi : {{ email }}</p>
+</div>
 <router-outlet></router-outlet>
 <!--
 <div>
