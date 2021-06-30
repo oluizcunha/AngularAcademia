@@ -138,6 +138,26 @@ export class AppComponent
   ngOnDestroy() {
     console.log('AppComponent:OnDestroy');
   }
+
+  umJson = {
+    nome: 'Dexter',
+    idade: '8',
+    endereco: { rua: 'Rua da Casinha', numero: '01' },
+  };
+  mesesAno = [
+    'Jan',
+    'Fev',
+    'Mar',
+    'Abr',
+    'Mai',
+    'Jun',
+    'Jul',
+    'Ago',
+    'Set',
+    'Out',
+    'Nov',
+    'Dez',
+  ];
 }
 
 class Filme {

@@ -262,4 +262,37 @@
       [mensagem]="'@Input binding com um salve do componente-pai!'"
     ></app-componente-filho>
   </div>
+
+  <div>
+    <h1>Pipe Transform</h1>
+    <div style="width: 100%">
+      <div style="width: 40%; float: left; border: solid 1px black">
+        <h2>Uppercase Pipe</h2>
+        <p>{{ title | uppercase }}</p>
+        <br />
+        <h2>Lowercase Pipe</h2>
+        <p>{{ title | lowercase }}</p>
+        <br />
+        <h2>Currency Pipe - Pipe para conversão de moeda</h2>
+        <p>{{ 6589.23 | currency: "USD" }}</p>
+        <p>{{ 6589.23 | currency: "USD":true }}</p>
+        <br />
+        <h2>Date Pipe</h2>
+        <p>{{ dataHoje | date: "d/M/y" }}</p>
+        <p>{{ dataHoje | date: "shortTime" }}</p>
+        <br />
+        <h2>Decimal Pipe</h2>
+        <p>{{ 454.78787814 | number: "3.4-4" }}</p>
+        <br />
+      </div>
+      <div style="width: 40%; float: left; border: solid 1px black">
+        <h2>Json Pipe</h2>
+        <b>{{ umJson | json }}</b> <br />
+        <h2>Percent Pipe</h2>
+        <b>{{ 00.325 | percent }}</b> <br />
+        <h2>Slice Pipe</h2>
+        <b>{{ mesesAno | slice: 2:6 }}</b> <br />
+      </div>
+    </div>
+  </div>
 </div>
