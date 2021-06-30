@@ -14,6 +14,7 @@ import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
+import { ProductService } from './product.service';
 
 registerLocaleData(localePt, 'pt');
 
@@ -32,6 +33,7 @@ registerLocaleData(localePt, 'pt');
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
+    ProductService,
   ],
   bootstrap: [AppComponent],
 })

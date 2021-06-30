@@ -194,10 +194,10 @@ export class AppComponent
   }
 
   produtos!: Produto[];
-  productService;
 
-  constructor() {
-    this.productService = new ProductService();
+  //injecao de dependencia
+  constructor(private productService: ProductService) {
+    productService = this.productService;
     console.log('AppComponent:Constructor');
   }
   obterProdutos() {
