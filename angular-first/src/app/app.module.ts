@@ -9,8 +9,11 @@ import { AlterarTextoDirective } from './alterar-texto.directive';
 import { NomedocomponentComponent } from './nomedocomponent/nomedocomponent.component';
 import { ComponenteFilhoComponent } from './componente-filho/componente-filho.component';
 import { LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
+
 import localePt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { HomeComponent } from './home/home.component';
+import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 registerLocaleData(localePt, 'pt');
 
 @NgModule({
@@ -20,6 +23,8 @@ registerLocaleData(localePt, 'pt');
     AlterarTextoDirective,
     NomedocomponentComponent,
     ComponenteFilhoComponent,
+    HomeComponent,
+    FaleConoscoComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
