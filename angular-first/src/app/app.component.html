@@ -253,4 +253,13 @@
     <h1 appAlterarTexto></h1>
   </div>
   <br />
+
+  <div>
+    <h1>Life Cycle Hook</h1>
+    <button (click)="toggle()">Exibir/Ocultar</button>
+    <app-componente-filho
+      *ngIf="exibirFilho"
+      [mensagem]="'@Input binding com um salve do componente-pai!'"
+    ></app-componente-filho>
+  </div>
 </div>
