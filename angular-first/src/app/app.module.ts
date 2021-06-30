@@ -8,6 +8,10 @@ import { MessageComponent } from './message/message.component';
 import { AlterarTextoDirective } from './alterar-texto.directive';
 import { NomedocomponentComponent } from './nomedocomponent/nomedocomponent.component';
 import { ComponenteFilhoComponent } from './componente-filho/componente-filho.component';
+import { LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localePt, 'pt');
 
 @NgModule({
   declarations: [
@@ -15,14 +19,13 @@ import { ComponenteFilhoComponent } from './componente-filho/componente-filho.co
     MessageComponent,
     AlterarTextoDirective,
     NomedocomponentComponent,
-    ComponenteFilhoComponent
+    ComponenteFilhoComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt' },
+    { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
