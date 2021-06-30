@@ -158,19 +158,27 @@ export class AppComponent
   ];
 
   email: any;
+  senha: any;
   formdata: any;
   ngOnInit() {
     this.formdata = new FormGroup({
-      email: new FormControl('agular@mail.com'),
-      senha: new FormControl('#$@%'),
+      email: new FormControl(
+        '',
+        Validators.compose([
+          Validators.required,
+          Validators.pattern('[^ @]*@[^ @]*'),
+        ])
+      ),
+      senha: new FormControl(''),
     });
     console.log('AppComponent:OnInit');
   }
   enviarDados(data: any) {
-    alert(
-      'O e-mail inserido foi: ' + data.email + ' \nE a senha: ' + data.senha
-    );
+    // alert(
+    //   'O e-mail inserido foi: ' + data.email + ' \nE a senha: ' + data.senha
+    // );
     this.email = data.email;
+    this.senha = data.senha;
   }
 }
 

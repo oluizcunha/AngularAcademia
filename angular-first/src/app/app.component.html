@@ -128,10 +128,11 @@
         formControlName="senha"
       />
       <br />
-      <input type="submit" value="Enviar" />
+      <input type="submit" [disabled]="!formdata.valid" value="Enviar" />
     </form>
   </div>
   <p>O email informado foi : {{ email }}</p>
+  <p>A senha informada foi : {{ senha }}</p>
 </div>
 <router-outlet></router-outlet>
 <!--
