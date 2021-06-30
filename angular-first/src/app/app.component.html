@@ -1,13 +1,3 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<!-- Toolbar -->
 <div class="toolbar" role="banner">
   <img
     width="40"
@@ -19,7 +9,6 @@
 </div>
 
 <div class="content" role="main">
-  <!-- Highlight Card -->
   <div class="card highlight-card card-small">
     <svg
       id="rocket"
@@ -82,8 +71,6 @@
     </svg>
   </div>
 
-  <!-- Aqui vamos inserir o codigo da pagina -->
-
   <svg
     id="clouds"
     xmlns="http://www.w3.org/2000/svg"
@@ -102,17 +89,8 @@
   </svg>
 </div>
 
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 <router-outlet></router-outlet>
-
-<!-- Aqui sera nosso repo de codigos -->
+<!--
 <div>
   <h1>Jogando Algumas coisas de interpolation</h1>
   <span>Aqui temos x: {{ x }} </span>
@@ -126,7 +104,7 @@
   <span>Uma funcao {{ exibirTexto() }}</span>
 
   <h1>Property binding</h1>
-  <!-- deve-se ser vinculado ao input -->
+
   <span>Valor de x: <input [value]="x" /></span>
   <br />
 
@@ -202,14 +180,13 @@
   <div>
     <h1>Usando NGClass no CSS</h1>
     <p>Diretiva ngClass</p>
-    <!-- primeira indicação de implementação-->
+
     <div [ngClass]="'color size'">
       Texto com fonte e cor indicados no arquivo CSS: configurado no template
       como uma propriedade string
     </div>
   </div>
 
-  <!-- Outro exemplo-->
   <div ngClass="color size">
     Texto com fonte e cor indicados no arquivo CSS: configurado no template como
     uma string
@@ -222,8 +199,7 @@
     Texto com fonte e cor indicados no arquivo CSS: configurado no template como
     um object
   </div>
-  <!-- Obtendo os dados a partir do arquivo .ts. -->
-  <!-- É possivel alterar o valor a partir do arquivo .ts. -->
+
   <div [ngClass]="cssAlteradoViaVar">
     Texto com fonte e cor indicados no arquivo CSS: configurado no template a
     partir do arquivo app.component.ts
@@ -234,7 +210,6 @@
   </div>
 
   <div>
-    <!-- ngStyle -->
     <h1>Diretiva ngStyle</h1>
     <br /><br />
     <input [(ngModel)]="color" />
@@ -295,4 +270,5 @@
       </div>
     </div>
   </div>
-</div>
+  <br />
+</div> -->
