@@ -15,6 +15,7 @@ import { registerLocaleData } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { FaleConoscoComponent } from './fale-conosco/fale-conosco.component';
 import { ProductService } from './product.service';
+import { LoggerService } from './logger.service';
 
 registerLocaleData(localePt, 'pt');
 
@@ -34,6 +35,7 @@ registerLocaleData(localePt, 'pt');
     { provide: LOCALE_ID, useValue: 'pt' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
     ProductService,
+    LoggerService,
   ],
   bootstrap: [AppComponent],
 })
