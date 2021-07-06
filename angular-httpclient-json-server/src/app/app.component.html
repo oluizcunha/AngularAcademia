@@ -11,20 +11,26 @@
     shadow-sm
   "
 >
-  <h5 class="my-0 mr-md-auto font-weight-normal">Employee Management</h5>
-  <nav class="my-2 my-md-0 mr-md-3">
-    <a
-      class="btn btn-outline-primary"
+  <h2 class="my-0 mr-md-auto font-weight-normal flex-item">
+    Employee Management
+  </h2>
+  <div class="flex">
+    <nav class="my-2 my-md-0 mr-md-3">
+      <button
+        class="btn btn-outline-primary flex-item"
+        routerLinkActive="active"
+        routerLink="/create-employee"
+      >
+        Create Employee
+      </button>
+    </nav>
+    <button
+      class="btn btn-outline-primary flex-item"
       routerLinkActive="active"
-      routerLink="/create-employee"
-      >Create Employee</a
+      routerLink="/employees-list"
     >
-  </nav>
-  <a
-    class="btn btn-outline-primary"
-    routerLinkActive="active"
-    routerLink="/employees-list"
-    >Employees List</a
-  >
+      Employees List
+    </button>
+  </div>
 </div>
 <router-outlet></router-outlet>
