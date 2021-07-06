@@ -15,6 +15,7 @@ export class EmployeeListComponent implements OnInit {
   loadEmployees() {
     return this.restApi.getEmployees().subscribe((data: {}) => {
       this.Employee = data;
+      console.log(this.Employee);
     });
   }
   // Delete employee

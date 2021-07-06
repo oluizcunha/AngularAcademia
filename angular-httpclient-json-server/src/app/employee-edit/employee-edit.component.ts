@@ -21,6 +21,7 @@ export class EmployeeEditComponent implements OnInit {
   }
   // Update employee data
   updateEmployee() {
+    console.log(this.employeeData);
     if (window.confirm('Are you sure, you want to update?')) {
       this.restApi
         .updateEmployee(this.id, this.employeeData)

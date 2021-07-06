@@ -11,6 +11,7 @@ export class EmployeeCreateComponent implements OnInit {
   constructor(public restApi: RestApiService, public router: Router) {}
   ngOnInit() {}
   addEmployee() {
+    console.log(this.employeeDetails);
     this.restApi.createEmployee(this.employeeDetails).subscribe((data: {}) => {
       this.router.navigate(['/employees-list']);
     });
