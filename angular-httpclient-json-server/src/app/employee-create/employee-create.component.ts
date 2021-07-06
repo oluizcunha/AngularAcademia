@@ -7,7 +7,7 @@ import { RestApiService } from '../shared/rest-api.service';
   styleUrls: ['./employee-create.component.css'],
 })
 export class EmployeeCreateComponent implements OnInit {
-  @Input() employeeDetails = { name: '', email: '', phone: 0 };
+  @Input() employeeDetails = { name: '', email: '', phone: '' };
   constructor(public restApi: RestApiService, public router: Router) {}
   ngOnInit() {}
   addEmployee() {
