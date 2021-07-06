@@ -1,14 +1,16 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
+// HttpClient module para RESTful API
+import { HttpClientModule } from '@angular/common/http';
+// Routing module para router service
+import { AppRoutingModule } from './app-routing.module';
+// Forms module
+import { FormsModule } from '@angular/forms';
+// Components
 import { EmployeeCreateComponent } from './employee-create/employee-create.component';
 import { EmployeeEditComponent } from './employee-edit/employee-edit.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
-
-import { HttpClientModule } from '@angular/common/http';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http';
     EmployeeEditComponent,
     EmployeeListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
